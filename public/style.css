@@ -9,10 +9,9 @@ main {
   }
   main > div {
     background-color: #c86e6e;
-    width: 100px;
+    
     margin: 10px;
     text-align: center;
-    line-height: 75px;
-    font-size: 30px;
+    
   }
   
