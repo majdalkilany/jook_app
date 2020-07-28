@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%- include('layout/header'); -%>
+
+    <main>
+
+        <div>
+
+    <%data.forEach(data=>{%>
+
+        <h4><%=data.type%></h4>
+        <p><%=data.setup%></p>
+        <p><%=data.punchline%></p>
+    <form action="/add" method="get">
+<input type="hidden" name="type" value="<%=data.type%>">
+<input type="hidden" name="setup" value="<%=data.setup%>">
+<input type="hidden" name="punchline" value="<%=data.punchline%>">
+<input type="submit" value="add to Fav">
+
+    </form>
+
+
+        <%})%>
+
+
+        </div>
+    </main>
+</body>
+</html>

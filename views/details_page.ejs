@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%- include('layout/header'); -%>
+
+    <main>
+
+        <div>
+
+
+        <h4><%=data.type%></h4>
+        <p><%=data.setup%></p>
+        <p><%=data.punchline%></p>
+        <form action="/update/<%=data.id%>?_method=put" method="POST">
+            <input type="text" name="type" value="<%=data.type%>">
+            <input type="text" name="setup" value="<%=data.setup%>">
+            <input type="text" name="punchline" value="<%=data.punchline%>">
+            <input type="submit" value="update">
+            
+                </form>
+                <form action="/delete/<%=data.id%>?_method=put" method="POST">
+                    <input type="submit" value="delete">
+                    
+                        </form>
+                                
+
+
+
+        </div>
+    </main>
+
+</body>
+</html>

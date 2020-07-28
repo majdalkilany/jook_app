@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%- include('layout/header'); -%>
+
+    <main>
+
+        <div>
+
+    <%data.forEach(data=>{%>
+
+        <h4><%=data.type%></h4>
+        <p><%=data.setup%></p>
+        <p><%=data.punchline%></p>
+        <a href="/randomJoke"><button>home</button></a>
+
+
+        <%})%>
+
+
+        </div>
+    </main>
+
+</body>
+</html>
